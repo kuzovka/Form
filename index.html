@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Форма регистрации</title>
+        <link rel="stylesheet" type="text/css" href="reset.css" />
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="fon">
+            <div class="container"> <!--контейнер с формой и картинкой-->
+                <div class="container__image">
+                    <img src="images/image.jpg" alt="фон с природой" class="image">
+                </div> 
+                <form class="container__form" action="https://www.bit-by-bit.ru/form-submit">
+
+                    <!--блок для форм с ФИО-->
+                   
+                        <h1>Регистрация</h1>
+                        <div class="container__name">
+                            <div class="item">
+                                <label for="firstName">Имя</label>
+                                <input  id="firstName" type="text" name="firstName"/>
+                            </div> 
+                            <div class="item">
+                                <label for="lastName">Фамилия</label>
+                                <input  id="lastName" type="text" name="lastName"/>
+                            </div>
+                            <div class="item">
+                                <label for="email">Email</label>
+                                <input  id="email" type="email" name="email"/>
+                            </div>
+                            <div class="item">
+                                <label for="tel">Телефон</label>
+                                <input  id="tel" type="tel" name="tel"/>
+                            </div>         
+                        </div>
+                   
+
+
+                    <!--блок для форм адресом-->
+                        <h2>Адрес доставки</h2>
+                            <div class="container__adreess">
+                                <div class="item__address">
+                                    <label for="country">Страна</label>
+                                    <select id="country"  name="country"> <!--при добавлении этого div не помещается 
+                                        по 3 блока в строке и пропадает текст "Город", хотя в css размеры под 3 элемента 
+                                        на строке заданы и если прописывать не select, а input, все помещается-->
+                                        <option value="Россия">Россия</option>
+                                        <option value="Беларусь">Беларусь</option>
+                                        <option value="Украина">Украина</option>
+                                        <option value="Казахстан">Казахстан</option>
+                                </div> 
+                                <div class="item__address">
+                                    <label for="city">Город</label>
+                                    <input id="city" type="text" name="city"/>
+                                </div>
+                                <div class="item__address">
+                                    <label for="index">Почтовый индекс</label>
+                                    <input id="index" type="number" name="index"/>
+                                </div>
+                            </div>
+                            <div class="item__address_street">
+                                <label for="street">Адрес доставки (улица, дом, квартира)</label>
+                                <input id="street" type="text" name="street"/>
+                            </div>          
+
+
+                   <!--блок для чекбоксов-->
+                            <div class="container__contacts">
+                                <h2>Уведомлять об акциях и скидках</h2>
+                                <p>Мы не будем отправлять спам, но напишем, когда поступят новые товары или будет большая распродажа.</p>
+                                <div class="container__checkbox">
+                                    <div class="checkbox-choice">
+                                        <input class="checkbox" type="checkbox" id="contactChoice1" name="contacts" value="email">
+                                        <input class="checkbox" type="checkbox" id="contactChoice1" name="contacts" value="email">
+                                        <input class="checkbox" type="checkbox" id="contactChoice2" name="contacts" value="sms">
+                                        <input class="checkbox" type="checkbox" id="contactChoice3" name="contacts" value="push">
+                                 
+                                    </div>
+                                    <div class="checkbox-var">
+                                        <label for="contactChoice1">По email</label>
+                                        <label for="contactChoice1">По email</label>                                                     
+                                        <label for="contactChoice2">По SMS</label>                            
+                                        <label for="contactChoice3">Push-уведомления в приложении</label>
+                                    </div>  
+                                </div>  
+                            </div>
+                            <button class="btn" type="submit">Создать аккаунт</button>
+                        
+            
+
+                 </form> <!--контейнер для формы регистрации-->
+            </div> <!--контейнер с формой и картинкой-->
+        </div>
+
+          
+
+
+            
+        
+
+    </body>
+</html>
